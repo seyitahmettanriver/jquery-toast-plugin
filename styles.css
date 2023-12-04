@@ -1,0 +1,173 @@
+/** CSS RESET **/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  background: #111216;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4285em;
+}
+
+
+
+
+.custom-toast-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    margin-bottom: 1rem;
+}
+
+.custom-toast {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s;
+    width: 330px;
+    height: auto;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-radius: 140px;
+    box-shadow: 0 9px 10px rgb(0 0 0 / 29%);
+    margin-right: 1rem;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.custom-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.custom-toast .icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.custom-toast .icon-container > svg {
+    height: 34px;
+}
+
+.custom-toast .content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.custom-toast .content-container .title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.custom-toast .content-container .message {
+    font-size: 14px;
+    font-weight: 400;
+    color: #111215;
+}
+
+.custom-toast > button {
+    background-color: transparent;
+    font-size: 25px;
+    color: #9b9dab;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 34px;
+    width: 34px;
+}
+
+.custom-toast.success .icon-container > svg {
+    fill: #47D764;
+}
+
+.custom-toast.success .content-container .title {
+    color: #47d764;
+}
+
+.custom-toast.error .icon-container > svg {
+    fill: #ff355b;
+}
+
+.custom-toast.error .content-container .title {
+    color: #ff355b;
+}
+
+.custom-toast.info .icon-container > svg {
+    fill: #2F86EB;
+}
+
+.custom-toast.info .content-container .title {
+    color: #2F86EB;
+}
+
+.custom-toast.warning .icon-container > svg {
+    fill: #FFC021;
+}
+
+.custom-toast.warning .content-container .title {
+    color: #FFC021;
+}
+
+.custom-toast-container .custom-toast:last-child {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 568px) {
+    .custom-toast {
+        margin: auto 0.5rem;
+        left: 0;
+        right: 0;
+        width: calc(100% - 1rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .custom-toast-container {
+        margin: 0;
+    }
+}
