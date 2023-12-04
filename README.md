@@ -2,6 +2,11 @@
 
 A lightweight and customizable Toast plugin for jQuery, adding user-friendly notifications to your web applications.
 
+## Live Demo
+
+Check out the live demo on JSFiddle: [JSFiddle Demo](https://jsfiddle.net/s4cdtvk9/)
+
+
 ## Installation
 
 1. Include jQuery in your project.
